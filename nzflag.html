@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <title>NZ Flag</title>
+
+    <style>
+
+
+      #nzFlag{
+        /* width: 1200px; */
+      }
+
+      .nz-flag{
+
+        position: relative;
+        -webkit-text-fill-color: red;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: white;
+        box-shadow: 5px 10px 8px #888888;
+
+      }
+      .jpn-flag{
+        position: relative;
+        box-shadow: 5px 10px 8px #888888;
+      }
+
+      .circle{
+        position: absolute;
+        top: 100px;
+        left: 300px;
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+
+      }
+
+      .rectangle{
+        height: 400px;
+        width: 800px;
+      }
+
+
+      .fa-star{
+        font-size: 3rem;
+        color: red;
+        /* border: solid 2px white; */
+      }
+
+      .star-one{
+
+        position: absolute;
+        top: 35px;
+        right: 150px;
+      }
+
+      .star-two{
+
+        position: absolute;
+        bottom: 35px;
+        right: 150px;
+      }
+      .star-three{
+
+        position: absolute;
+        top: 135px;
+        right: 40px;
+      }
+
+      .star-four{
+
+        position: absolute;
+        top: 135px;
+        right: 250px;
+      }
+
+      .flag{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+      }
+
+      .btn{
+        margin: 20px;
+
+      }
+      button{
+        padding: 10px;
+        margin-right: 20px;
+        cursor: pointer;
+        border: 2px solid #333;
+        border-radius: 5px;
+        outline: none;
+        box-shadow: 5px 10px 8px #888888;
+
+      }
+      button:hover{
+        background-color: tomato;
+        color: white;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="nz-flag rectangle" id="nzFlag" style="background-color: #011F7E;">
+
+      <i class="fa-spin fa fa-star star-one" aria-hidden="true"></i>
+      <i class="fa-spin fa fa-star star-two" aria-hidden="true"></i>
+      <i class="fa-spin fa fa-star star-three" aria-hidden="true"></i>
+      <i class="fa-spin fa fa-star star-four" aria-hidden="true"></i>
+
+      <img src="images/flag.jpg" class="flag" style="width: 300px;">
+
+
+      <div class="jpn-flag rectangle" style="background-color: white;">
+        <div class="circle">
+        </div>
+      </div>
+    </div>
+
+    <br>
+<!--
+    two buttons
+    Nz flag
+    another flag -->
+
+
+    <div class="btn">
+      <button class="nz-btn" type="button" name="button">New Zealand Flag
+        <i class="fa fa-flag" aria-hidden="true"></i>
+      </button>
+      <button class="jpn-btn"type="button" name="button">Another Flag
+        <i class="fa fa-flag" aria-hidden="true"></i>
+      </button>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+
+
+
+    <script type="text/javascript">
+    console.log('does it work?');
+
+    $('.jpn-flag').hide();
+
+    $('.nz-btn').click(function(){
+      $('nz-flag').show();
+      $('jpn-flag').hide();
+    });
+
+    $('.jpn-btn').click(function(){
+      $('nz-flag').hide();
+      $('jpn-flag').show();
+    });
+
+
+    </script>
+
+
+
+
+
+  </body>
+</html>
